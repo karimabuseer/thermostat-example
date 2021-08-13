@@ -14,7 +14,7 @@ views->client:"html output"]
 * Model 2 (clicking temperature up)
 [client->views: "user clicks temp up button"
 views->interface:"interface listenns to dom event"
-interface->controller:"post request"
+interface->controller:"post request to /temperature that specifies up/down/reset"
 controller->model:"temperature.up"
 interface->controller:"get request"
 controller->model:"request model data"
