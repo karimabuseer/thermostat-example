@@ -23,6 +23,18 @@ controller->interface:"json of model data"
 interface->views:"parse json, update html attribs using jquery"
 views->client:"updated html output"]
 
+* Model 3 (clicking power saving mode on)
+[client->views: "user clicks power saving on button"
+views->interface:"interface listenns to dom event"
+interface->controller:"post request to /power-saving-mode that specifies if on"
+controller->model:"thermostat.power_save_on"
+interface->controller:"get request to /temperature"
+controller->model:"request model data"
+model->controller:"returns model data, controller converts to json"
+controller->interface:"json of model data"
+interface->views:"parse json, update html attribs using jquery"
+views->client:"updated html output"]
+
 
 # Thermostat
 
