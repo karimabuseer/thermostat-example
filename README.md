@@ -11,6 +11,17 @@ views->googleapi: "Load jquery lib"
 googleapi->views: "return jqeury lib"
 views->client:"html output"]
 
+* Model 2 (clicking temperature up)
+[client->views: "user clicks temp up button"
+views->interface:"interface listenns to dom event"
+interface->controller:"post request"
+controller->model:"temperature.up"
+interface->controller:"get request"
+controller->model:"request model data"
+model->controller:"returns model data, controller converts to json"
+controller->interface:"json of model data"
+interface->views:"parse json, update html attribs using jquery"
+views->client:"updated html output"]
 
 
 # Thermostat
