@@ -1,6 +1,17 @@
 # Models
 * The main purpose of this exercise is to model the flow of requests in a slightly more complex project (e.g a project that involves multiple models in different languages, plus styling code)
 * Two models are reproduced below. For full models, take a look at images
+### Text to reproduce model using diagram.codes: 
+* Model 1 (visting home page)
+[client->controller:"GET /"
+controller->views: "load html"
+views=>css: "load styling"
+css-->views: "return styling"
+views->googleapi: "Load jquery lib"
+googleapi->views: "return jqeury lib"
+views->client:"html output"]
+
+
 
 # Thermostat
 
